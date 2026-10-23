@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "updated": "2026-10-23",
+  "plugins": [
+    {
+      "id": "shell-guard",
+      "name": {
+        "en": "Shell Guard",
+        "tr": "Kabuk Koruması"
+      },
+      "description": {
+        "en": "Blocks destructive commands (disk formatting, diskpart, deleting drive roots, shadow copies, boot config) before ADA runs them.",
+        "tr": "Yıkıcı komutları (disk biçimlendirme, diskpart, sürücü kökünü silme, gölge kopyalar, önyükleme ayarları) ADA çalıştırmadan önce engeller."
+      },
+      "category": "security",
+      "tags": [
+        "safety",
+        "shell"
+      ],
+      "tools": [],
+      "hooks": [
+        "before_tool"
+      ],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/shell-guard/plugin.py",
+      "sha256": "f38f8eec3395a06570d75e1d3f6bb49c4d9ba4afe4a23d61bb993862348a7c4c",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/shell-guard"
+    },
+    {
+      "id": "tcmb-rates",
+      "name": {
+        "en": "TCMB Exchange Rates",
+        "tr": "TCMB Döviz Kurları"
+      },
+      "description": {
+        "en": "Adds a tool for today's official Central Bank of Turkey exchange rates (TRY), straight from tcmb.gov.tr.",
+        "tr": "TCMB'nin bugünkü resmi döviz kurlarını (TL) doğrudan tcmb.gov.tr'den getiren bir araç ekler."
+      },
+      "category": "finance",
+      "tags": [
+        "finance",
+        "turkey",
+        "currency"
+      ],
+      "tools": [
+        "tcmb_rates"
+      ],
+      "hooks": [],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/tcmb-rates/plugin.py",
+      "sha256": "b5897561f8d5371f19ad272fdc2585061fa7655b8fe57528343c41b643226dde",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/tcmb-rates"
+    },
+    {
+      "id": "text-stats",
+      "name": {
+        "en": "Text Stats",
+        "tr": "Metin İstatistikleri"
+      },
+      "description": {
+        "en": "Exact word, character, sentence and paragraph counts, reading time and most frequent words.",
+        "tr": "Kesin kelime, karakter, cümle ve paragraf sayısı, okuma süresi ve en sık geçen kelimeler."
+      },
+      "category": "writing",
+      "tags": [
+        "writing",
+        "analysis"
+      ],
+      "tools": [
+        "text_stats"
+      ],
+      "hooks": [],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/text-stats/plugin.py",
+      "sha256": "fc5ea494fc62c6c5b500e5cc8c6ae2095c7c938d5790e410cc3bd596b1481091",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/text-stats"
+    },
+    {
+      "id": "password-generator",
+      "name": {
+        "en": "Password Generator",
+        "tr": "Parola Üretici"
+      },
+      "description": {
+        "en": "Strong random passwords and memorable passphrases from a cryptographically secure generator. Nothing is stored.",
+        "tr": "Kriptografik olarak güvenli üreteçle güçlü parolalar ve akılda kalır parola cümleleri. Hiçbir şey saklanmaz."
+      },
+      "category": "security",
+      "tags": [
+        "security",
+        "utility"
+      ],
+      "tools": [
+        "generate_password"
+      ],
+      "hooks": [],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/password-generator/plugin.py",
+      "sha256": "fb5b4af9224200208af1790a9b42a53c5cdad8b461781fef5143526339ea6b80",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/password-generator"
+    },
+    {
+      "id": "tool-audit-csv",
+      "name": {
+        "en": "Tool Audit CSV",
+        "tr": "Araç Denetim Kaydı (CSV)"
+      },
+      "description": {
+        "en": "Writes every tool call ADA makes to kernel/tool_audit.csv, ready to open in Excel. Long texts and email bodies are not recorded.",
+        "tr": "ADA'nın her araç çağrısını Excel'de açılabilen kernel/tool_audit.csv dosyasına yazar. Uzun metinler ve e-posta gövdeleri kaydedilmez."
+      },
+      "category": "productivity",
+      "tags": [
+        "audit",
+        "excel"
+      ],
+      "tools": [],
+      "hooks": [
+        "after_tool"
+      ],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/tool-audit-csv/plugin.py",
+      "sha256": "76811d95b3bed18ae7e57ee5da0f3ef0c91d318ad6b23b87945c91dcb858a364",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/tool-audit-csv"
+    },
+    {
+      "id": "dated-filenames",
+      "name": {
+        "en": "Dated Filenames",
+        "tr": "Tarihli Dosya Adları"
+      },
+      "description": {
+        "en": "ADA starts every file it creates with today's date (2026-10-23_report.docx), so outputs sort and find easily.",
+        "tr": "ADA oluşturduğu her dosyanın adına bugünün tarihini ekler (2026-10-23_rapor.docx); dosyalar kolay sıralanır ve bulunur."
+      },
+      "category": "productivity",
+      "tags": [
+        "files",
+        "reports"
+      ],
+      "tools": [],
+      "hooks": [
+        "system"
+      ],
+      "version": "1.0.0",
+      "author": "Guardscloud",
+      "api": 1,
+      "min_ada": "0.5.0",
+      "verified": true,
+      "file": "plugins/dated-filenames/plugin.py",
+      "sha256": "ef1743f87a7fe509f844888a2252dafcc97129c97cd0c93fda73a53de74db187",
+      "homepage": "https://github.com/Guardscloud/ADA-Plugins/tree/main/plugins/dated-filenames"
+    }
+  ]
+}
